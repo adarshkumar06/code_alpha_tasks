@@ -1,0 +1,126 @@
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2f363e;
+  }
+  .box{
+    position: relative;
+    width: 450px;
+    height: 550px;
+    border-radius: 25px;
+    background-image: url(todo_background1.png);
+    background-size: cover;
+    background-position: center;
+    padding: 30px 50px;
+    box-shadow: 
+    15px 15px 40px rgba(0, 0, 0, 0.1),
+    5px 5px 30px rgba(14, 14, 14, 0.409),
+    inset 5px 5px 10px rgba(51, 52, 50, 0.5),
+    inset 5px 5px 20px rgba(20, 20, 20, 0.2),
+    inset -5px -5px 15px rgba(20, 21, 20, 0.578);
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  .list{
+    color: crimson;
+    }
+  .addTask{
+    background: rgb(163, 23, 51);
+    border-radius: 25px;
+    margin-top: 15px;
+    padding: 8px 15px;
+    color: white;
+    box-shadow: 5px 5px 7px rgba(125, 17, 17, 0.655),
+    inset 2px 2px 5px rgba(64, 45, 45, 0.5),
+    inset -3px -3px 5px rgb(63, 44, 44);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  input[type="text"] {
+    /*width: 60%;
+    padding: 8px;
+    margin-right: 10px;*/    
+    position: relative;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px 6px;
+    margin-right: 5px;
+    border-radius: 30px;
+    font-size: 1em;
+    box-shadow: 5px 5px 7px rgba(105, 105, 102, 0.655),
+    inset 2px 2px 5px rgba(94, 95, 92, 0.5),
+    inset -3px -3px 5px rgba(96, 84, 84, 0.2);    
+  }
+  
+  button {
+    padding: 8px 20px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .box li {
+    position: relative;
+    width: calc(100% - 50px);
+    display: flex;
+    align-items: center;
+    background: #1e7e8d;
+    margin: 15px 0;
+    padding: 6px 10px 10px 45px;
+    min-height: 30px;
+    cursor: pointer;
+    border-radius: 25px;
+    color: white;
+    box-shadow: 5px 5px 7px rgba(50, 79, 83, 0.655),
+    inset 2px 2px 5px rgba(58, 79, 82, 0.5),
+    inset -3px -3px 5px rgba(44, 42, 42, 0.2);
+  }
+  .box li::before{
+    content: '';
+    position: absolute;
+    left: 8px;
+    margin-top: 4px;
+    width: 30px;
+    height: 30px;
+    background: #000000;
+    border-radius: 50%;
+  } 
+  .box li.complete::after{
+    content: '';
+    position: absolute;
+    left: 16px;
+    width: 12px;
+    height: 6px;
+    border-left: 2px solid#d60606;
+    border-bottom: 2px solid#d60606;
+    transform: rotate(315deg);
+  }
+  #taskList{
+    position: relative;
+    margin-top: 20px;
+    height: 350px;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+  ::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+  }  
+  ::-webkit-scrollbar{
+    width: 5px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: #000000;
+  }
